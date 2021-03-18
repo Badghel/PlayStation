@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar h1{
+    font-size: 50px;
+}
+.menu-icon{
+    width: 25px;
+    cursor: pointer;
+    display: none;
+}
+#nav{
+    
+    flex: 1;
+    text-align: right;
+    display: none;
+}
+#nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+#nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+#nav ul li a:hover{
+    color: #ff5ea2;
+}
+#nav.active{
+    display: block;
+}
+.nav2{
+    flex: 1;
+    display: none;
+    text-align: left;
+
+}
+#hamburguesa2{
+    height: 250px;
+}
+#video{
+    width: 250px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+.col-1{
+    flex-basis: 40%;
+    position: relative;
+    
+}
+.col-1 h2{
+    font-size: 60px;
+}
+.col-1 p{
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 2;
+    padding-left: 10%;
+}
+.col-1 a{
+    text-decoration: none;
+    color: blueviolet;
+    font-weight: bold;
+}
+.col-1 a:hover{
+    color: #FFAF7B;
+}
+.col-3{
+    content: ' ';
+    background: linear-gradient(#C9D6FF,#E2E2E2);
+}
+.col-2{
+    line-height: 2;
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+@media only screen and (max-width: 700px){
+    #nav{
+        width: 100%;
+        background: linear-gradient(#ff54a2,#ff575a);
+        position: absolute;
+        top: 55px;
+        right: 0;
+        z-index: 2;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .navbar h1{
+        font-size: 30px;
+        justify-self: left;
+    }
+    .row{
+        flex-direction: column;
+        margin: 25px auto;
+
+    }
+    #video{
+        width: 225px;
+    }
+    #hamburguesa2{
+        height: 150px;
+    }
+    .col-1{
+       flex-basis: 100%;
+    }
+    .col-1 h2{
+        font-size: 50px;
+
+    }
+    .col-2 h2{
+        font-size: 20px;
+    }
+    .col-2{
+        line-height: 1;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .col-3{
+        display: none;
+    }
+}
